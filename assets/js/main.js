@@ -76,8 +76,8 @@ $(function () {
 
 
   // 業務内容スクロールで表示
-  $(window).on('scroll', function() {
-    $('.services-item-js').each(function() {
+  $(window).on('scroll', function () {
+    $('.services-item-js').each(function () {
       const elemTop = $(this).offset().top;
       const scroll = $(window).scrollTop();
       const windowHeight = $(window).height();
@@ -140,30 +140,62 @@ $(function () {
     }
   });
 
-     // リクルートページポップアップ
-     for (let i = 1; i <= 4; i++) {
-      $(`.recruit-popup-btn0${i}`).on('click', function() {
-        $(`#popup-container0${i}`).fadeIn();
+  // リクルートページポップアップ
+  for (let i = 1; i <= 4; i++) {
+    $(`.recruit-popup-btn0${i}`).on('click', function () {
+      $(`#popup-container0${i}`).fadeIn();
+    });
+  }
+
+  // 閉じる処理（共通）
+  $('.close-popup').on('click', function () {
+    $(this).closest('.popup-container').fadeOut();
+  });
+
+
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 30) {
+      $(".header").addClass("active");
+    } else {
+      $(".header").removeClass("active");
+    };
+    if ($(window).scrollTop() > 30) {
+      $(".header__breadcrumb-wrap").addClass("active");
+    } else {
+      $(".header__breadcrumb-wrap").removeClass("active");
+    }
+  });
+
+
+// 郵便番号
+  $(function () {
+  // 個人住所：郵便番号から住所自動入力
+  $('#personal-zip').on('keyup blur', function () {
+    const zip = $(this).val().replace(/[^0-9]/g, '');
+    if (zip.length === 7) {
+      $.getJSON('https://zipcloud.ibsnet.co.jp/api/search?zipcode=' + zip, function (data) {
+        if (data.results) {
+          $('#prefecture').val(data.results[0].address1); // 都道府県
+          $('#city').val(data.results[0].address2); // 市区町村
+          $('#address-line-2').val(data.results[0].address3); // 町域を市区町村以下に
+        }
       });
     }
+  });
 
-    // 閉じる処理（共通）
-    $('.close-popup').on('click', function() {
-      $(this).closest('.popup-container').fadeOut();
-    });
-
-
-    $(window).on("scroll", function () {
-      if ($(window).scrollTop() > 30) {
-        $(".header").addClass("active");
-      } else {
-        $(".header").removeClass("active");
-      };
-      if ($(window).scrollTop() > 30) {
-        $(".header__breadcrumb-wrap").addClass("active");
-      } else {
-        $(".header__breadcrumb-wrap").removeClass("active");
-      }
-    });
+  // 事業所住所：郵便番号から一括で住所を取得
+  $('#company-zip').on('keyup blur', function () {
+    const zip = $(this).val().replace(/[^0-9]/g, '');
+    if (zip.length === 7) {
+      $.getJSON('https://zipcloud.ibsnet.co.jp/api/search?zipcode=' + zip, function (data) {
+        if (data.results) {
+          // 会社の全住所を連結
+          const fullAddress = data.results[0].address1 + data.results[0].address2 + data.results[0].address3;
+          $('#company-full-address').val(fullAddress); // 新しい一意のIDを使用
+        }
+      });
+    }
+  });
+});
 
 })

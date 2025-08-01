@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="email=no,telephone=no,address=no">
+  <!--!!!!!!!!!!!!!!!!!WPでは不要!!!!!!!!!!!!!!!!!!!!!-->
+  <title>フォーム</title>
+  <!--!!!!!!!!!!!!!!!!!公開時、allに変更する!!!!!!!!!!!!!!!!!!!!!-->
+  <meta name="robots" content="none">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+  <link rel="stylesheet" href="assets/css/html5reset-1.6.1.css">
+  <link rel="stylesheet" href="assets/css/style.css?20250410_2">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+  <div class="black-bg"></div>
+  <header>
+    <div class="header">
+
+      <div class="header__inner">
+        <a href="index.html" class="header__ttl-wrap header__item">
+          <h1 class="header__logo"><img src="assets/img/top/logo.png" alt="山口建設安全教育センター"></h1>
+        </a>
+        <nav class="header__menu-wrap header__item">
+          <div class="header__menu-inner">
+            <a href="index.html" class="header__menu">当センターについて</a>
+          </div>
+        </nav>
+      </div>
+      <div class="header__btn-wrap">
+        <div class="header__btn-img" id="js-hamburger-menu">
+          <img src="assets/img/top/hun-btn.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="header-sp">
+      <div class="header-sp__inner">
+        <div class="header-sp__btn-img">
+          <img src="assets/img/top/batsu-btn.png" alt="閉じる">
+        </div>
+        <div class="header-sp__menu">
+          <a href="company.html" class="header-sp__menu-item">会社概要</a>
+          <a href="services.html" class="header-sp__menu-item">業務紹介</a>
+          <a href="recruit.html" class="header-sp__menu-item">採用情報</a>
+          <a href="access.html" class="header-sp__menu-item">アクセス</a>
+          <a href="contact.html" class="header-sp__menu-item">お問い合わせ</a>
+          <a href="information.html" class="header-sp__menu-item">お知らせ</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="main page-form">
+    <div class="breadcrumbs-wrap">
+      <div class="breadcrumbs-wrap__content">HOME ＞ ○○○○</div>
+    </div>
+    <div class="page-form__ttl">
+      お申し込みフォーム
+    </div>
+
+    <div class="page-form__wrap">
+
+      <div class="form">
+
+        <!-- 講習名 -->
+        <div class="form__group">
+          <label class="form__label"><span class="required">講習名</span> <span class="note"></span></label>
+          <input type="text">
+        </div>
+
+        <!-- 講習開催日 -->
+        <div class="form__group">
+          <label class="form__label"><span class="required">講習開催日</span></label>
+          <div class="form__date">
+            <input type="text" placeholder="2025">
+            <span>～</span>
+            <input type="text" placeholder="12">
+          </div>
+        </div>
+
+        <!-- お名前 -->
+        <div class="form__group">
+          <label class="form__label"><span class="required">お名前</span></label>
+          <div class="form__row">
+            <input type="text" placeholder="（姓）山田">
+            <input type="text" placeholder="（名）太郎">
+          </div>
+        </div>
+
+        <!-- フリガナ -->
+        <div class="form__group">
+          <label class="form__label"><span class="required">フリガナ</span></label>
+          <div class="form__row">
+            <input type="text" placeholder="ヤマダ">
+            <input type="text" placeholder="タロウ">
+          </div>
+        </div>
+
+        <!-- 旧姓・通名 -->
+        <div class="form__group">
+          <label class="form__label">旧姓・通名 <span class="note">※併記を希望する方のみ</span></label>
+          <div class="form__row">
+            <input type="text" placeholder="（姓）山田">
+            <input type="text" placeholder="（名）太郎">
+          </div>
+        </div>
+
+        <!-- 旧姓・通名のフリガナ -->
+        <div class="form__group">
+          <label class="form__label">旧姓・通名の フリガナ <span class="note">※併記を希望する方のみ</span></label>
+          <div class="form__row">
+            <input type="text" placeholder="ヤマダ">
+            <input type="text" placeholder="タロウ">
+          </div>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label"><span class="required">郵便番号</span><span class="note">※ハイフンなし7桁の数字</span></label>
+          <input type="text" id="personal-zip" placeholder="1234567">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label"><span class="required">都道府県</span></label>
+          <input type="text" id="prefecture" placeholder="山口">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label"><span class="required">市区町村</span></label>
+          <input type="text" id="city" placeholder="防府">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label"><span class="required">市区町村以下</span></label>
+          <input type="text" id="address-line-2" placeholder="〇〇町〇丁目〇番地〇号"> </div>
+
+        <div class="form__group">
+          <label class="form__label">マンション・アパート名　部屋番号 <span class="note">※一戸建て住宅以外にお住まいの方</span></label>
+          <input type="text" placeholder="〇〇〇〇〇〇〇〇〇〇 202号室">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label"><span class="required">電話番号</span><span
+              class="note">※ハイフンなし10桁または11桁の数字<br>※必ず連絡がつく携帯電話等の番号</span></label>
+          <input type="text" placeholder="01234567890">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label"><span class="required">所属事業所の社名</span><span class="note">※会社に複数の拠点がある場合は拠点名を含む</span></label>
+          <input type="text" placeholder="山口中央保育株式会社〇〇支店">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label"><span class="required">所属事業所の郵便番号</span><span class="note">※ハイフンなし7桁の数字</span></label>
+          <input type="text" id="company-zip" placeholder="1234567">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label"><span class="required">所属事業所の住所</span></label>
+          <input type="text" id="company-full-address" placeholder="〇〇県〇〇市〇〇町〇丁目〇〇番地〇号"> </div>
+
+        <div class="form__group">
+          <label class="form__label"><span class="required">所属事業所の電話番号</span><span class="note">※ハイフンなし10桁または11桁の数字</span></label>
+          <input type="text" id="company-phone" placeholder="01234567890"></div>
+
+        <div class="form__group">
+          <label class="form__label"><span class="required">所属事業所の担当者氏名</span></label>
+          <div class="form__row">
+            <input type="text" placeholder="姓（例）山田">
+            <input type="text" placeholder="名（例）健太">
+          </div>
+        </div>
+
+        <!-- メールアドレス -->
+        <div class="form__group">
+          <label class="form__label"><span class="required">受講票等送付先メールアドレス</span></label>
+          <input type="email" placeholder="yamadataro2022@yamaguchianzen.co.jp">
+        </div>
+
+        <!-- 備考欄 -->
+        <div class="form__group">
+          <label class="form__label">備考欄</label>
+          <textarea rows="4" placeholder=""></textarea>
+        </div>
+      </div>
+
+      <div class="form__file-wrap" style="text-align: center;">
+        ファイル
+      </div>
+
+      <div class="page-form__privacy-wrap">
+        <p><a href="">「個人情保護方針」</a>をお読みいただきチェックを入れて下さい</p>
+         <input type="checkbox" name="privacy_agreement" required>
+      <span class="check-text">同意する</span>
+      
+      </div>
+
+      <div class="form-actions-wrap">
+        <div class="form-actions">
+          <button type="submit" class="confirm-button">送信</button>
+        </div>
+      </div>
+
+    </div>
+    <!--main end-->
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__logo">
+          <img src="assets/img/top/footer-logo.png" alt="">
+        </div>
+        <div class="footer__content">
+          <div class="footer__left">
+            <p class="footer__text footer__text--margin">山口労働局長登録講習機関<br>
+              一般社団法人</p>
+            <p class="footer__ttl">山口建設安全教育センター</p>
+
+          </div>
+          <div class="footer__center">
+            <p class="footer__text">〒753-0056<br>
+              山口県山口市湯田温泉<br>
+              5丁目2-34 102<br>
+              TEL・FAX <a href="083-902-1023">083-902-1023</a></p>
+          </div>
+          <div class="footer__right">
+            <a href="" class="footer__menu">HOME</a>
+            <a href="" class="footer__menu">当センターについて</a>
+            <a href="" class="footer__menu">外部リンク</a>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        © 山口建設安全教育センター All Rights Reserved.
+      </div>
+      <div class="footer__top-btn">
+        <img src="assets/img/top/go-top-btn.png" alt="TOPへ">
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js?20250410_2">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</body>
+
+</html>

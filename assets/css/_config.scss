@@ -104,39 +104,54 @@ margin: 62px 0 0;
 
 }
 
-.btn-style {
-  text-align: center;
+// パンくずリスト
+.breadcrumbs-wrap {
+  background-color: #ebebeb;
+  &__content {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3px 12px 3px;
+    font-size: 11px;
+  }
 
-  &__link {
-    background-color: #00a2ff;
-    border: 1px solid #00a2ff;
-    color: #fff;
-    display: inline-block;
-    padding: 8px;
-    position: relative;
-    text-decoration: none;
-    width: 200px;
+  &.guide {
+    padding: 160px 12px 0;
 
-    &:before {
-      border-right: 3px solid #fff;
-      border-top: 3px solid #fff;
-      bottom: 0;
-      content: "";
-      height: 10px;
-      margin: auto;
-      position: absolute;
-      right: 16px;
-      top: 0;
-      transform: rotate(45deg);
-      transition: right .5s; 
-      width: 10px;
-    }
-
-    &:hover::before {
-      right: 12px;
+    @include tab {
+      padding: 114px 12px 0;
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ふわっと表示
 

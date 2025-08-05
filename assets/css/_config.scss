@@ -251,7 +251,7 @@ margin: 62px 0 0;
     font-size: 20px;
     padding: 0 0 12px;
     margin: 0 0 24px;
-    color: #3071b9;
+    color: #047717;
     font-weight: bold;
 
     @include sp {
@@ -295,5 +295,12 @@ margin: 62px 0 0;
       line-height: 22px;
     }
   }
+
+      table,
+    td,
+    th {
+      border: 1px solid #595959;
+      padding: 4px;
+    }
 
 }

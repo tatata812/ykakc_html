@@ -32,13 +32,10 @@
     font-weight: bold;
   }
 
-
   &__wrap {
     max-width: 800px;
     padding: 0 12px;
     margin: 0 auto;
-
-
   }
 
   &__privacy-wrap {
@@ -47,42 +44,10 @@
     padding: 24px;
     text-align: center;
 
-
     a {
       color: #ff6600;
     }
-
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 // フォームスタイル
@@ -96,13 +61,12 @@
   &__group {
     margin-bottom: 24px;
 
-
     input[type="text"],
     input[type="email"],
     textarea {
       width: 100%;
       padding: 10px;
-      font-size: 15px;
+      font-size: 16px;
       border: 1px solid #ccc;
       border-radius: 3px;
       background: #fbfbfb;
@@ -154,9 +118,12 @@
     &--file-span {
       display: block;
       margin: 0 0 0 43px;
+
+      @include tab {
+        display: inline;
+        margin: 0;
+      }
     }
-
-
   }
 
   &__row {
@@ -174,7 +141,6 @@
     align-items: center;
     gap: 6px;
 
-
     span {
       font-size: 14px;
       color: #333;
@@ -185,7 +151,6 @@
     border: #ccc 1px solid;
     padding: 12px;
     margin: 0 0 16px;
-
   }
 
   &__box-list {
@@ -195,15 +160,27 @@
     }
   }
 
+  // ファイル
   &__file-wrap {
-    text-align: right;
-    margin: 0 0 40px;
+    margin: 0 0 40px auto;
+    background-color: #ccc;
+    width: 120px;
+    padding: 6px;
+    text-align: center;
   }
 
   &__file-flex {
+    margin: 16px 0 40px;
     display: flex;
     justify-content: flex-end;
     gap: 40px;
+    align-items: center;
+
+    @include tab {
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-end;
+    }
   }
 
   &__table-wrap {
@@ -245,10 +222,7 @@
 
     td {
       vertical-align: middle;
-
     }
-
-
 
     tr:nth-child(even) td {
       background: #fafafa;
@@ -268,8 +242,10 @@
     }
   }
 
-
-
+  &__table-text {
+    text-align: right;
+    margin: 8px 0 0;
+  }
 }
 
 // フォームボタン

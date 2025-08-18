@@ -262,6 +262,7 @@ td {
 .page-form__privacy-wrap a {
   color: #ff6600;
 }
+
 .form {
   max-width: 700px;
   font-family: "Helvetica Neue", sans-serif;
@@ -276,7 +277,7 @@ td {
 .form__group textarea {
   width: 100%;
   padding: 10px;
-  font-size: 15px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 3px;
   background: #fbfbfb;
@@ -324,6 +325,12 @@ td {
   display: block;
   margin: 0 0 0 43px;
 }
+@media (max-width: 820px) {
+  .form__label--file-span {
+    display: inline;
+    margin: 0;
+  }
+}
 .form__row {
   display: flex;
   gap: 12px;
@@ -350,13 +357,25 @@ td {
   color: #e60033;
 }
 .form__file-wrap {
-  text-align: right;
-  margin: 0 0 40px;
+  margin: 0 0 40px auto;
+  background-color: #ccc;
+  width: 120px;
+  padding: 6px;
+  text-align: center;
 }
 .form__file-flex {
+  margin: 16px 0 40px;
   display: flex;
   justify-content: flex-end;
   gap: 40px;
+  align-items: center;
+}
+@media (max-width: 820px) {
+  .form__file-flex {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-end;
+  }
 }
 .form__table-wrap {
   margin: 0 0 40px;
@@ -406,6 +425,10 @@ td {
 .form__table-wrap .highlight {
   color: #ff6600;
   font-weight: bold;
+}
+.form__table-text {
+  text-align: right;
+  margin: 8px 0 0;
 }
 
 .form-actions-wrap {
@@ -507,6 +530,7 @@ td {
     padding: 4px 8px;
   }
 }
+
 /* =================================
 
  ================================= */
@@ -719,6 +743,7 @@ header
     width: calc((100% - 8px) / 2);
   }
 }
+
 .main-visual {
   position: relative;
 }

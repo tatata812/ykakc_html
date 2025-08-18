@@ -35,12 +35,11 @@
       vertical-align: middle;
       margin: 0 12px 0 0;
 
-      @include sp{
-      display: block;
+      @include sp {
+        display: block;
       }
     }
   }
-
 
   &__content-wrap {
     max-width: 920px;
@@ -52,10 +51,9 @@
     width: 780px;
     margin: 0 auto 60px;
 
-    @include tab{
-    width: 100%;
-        margin: 0 auto 40px;
-
+    @include tab {
+      width: 100%;
+      margin: 0 auto 40px;
     }
 
     table,
@@ -67,51 +65,20 @@
 
     th {
       width: 150px;
-      @include tab{
-      width: 120px;
+
+      @include tab {
+        width: 120px;
       }
     }
 
     td {
       padding: 4px 16px;
 
-      @include tab{
-      padding: 4px 8px;
+      @include tab {
+        padding: 4px 8px;
       }
     }
-
-
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }
 
 /* =================================

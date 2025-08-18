@@ -34,11 +34,9 @@ header
   background-color: #fff;
   border-bottom: 1px solid #F7931E;
 
-
   @include tab {
     height: 62px;
   }
-
 
   &__inner {
     display: flex;
@@ -57,7 +55,6 @@ header
     }
   }
 
-
   &__ttl-wrap {
     max-width: 400px;
     margin: 0 auto 0 0;
@@ -66,10 +63,7 @@ header
       max-width: 220px;
       gap: 2px;
     }
-
-
   }
-
 
   &__menu-wrap {
 
@@ -139,8 +133,6 @@ header
     }
   }
 }
-
-
 
 
 .header-sp {
@@ -254,15 +246,6 @@ header
       width: calc((100% - 8px) / 2);
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
 }
 
 
@@ -325,11 +308,6 @@ header
 
     }
   }
-
-
-
-
-
 }
 
 /* =================================
@@ -356,7 +334,6 @@ header
     bottom: 0;
     left: 0;
     max-width: 200px;
-
 
     @include tab {
       max-width: 120px;
@@ -443,8 +420,6 @@ header
     }
   }
 
-  &__schedule-ttl-left {}
-
   &__schedule-ttl-right {
     font-size: 22px;
     color: #f15924;
@@ -486,8 +461,8 @@ footer
     max-width: 740px;
     margin: 0 auto;
 
-    @include tab{
-    padding: 40px 16px 24px 40px;
+    @include tab {
+      padding: 40px 16px 24px 40px;
     }
 
   }
@@ -520,18 +495,16 @@ footer
     padding: 16px 24px;
     border-right: 1px solid #fff;
 
-        @include tab {
+    @include tab {
       padding: 0;
       border-right: none;
     }
-
-
   }
 
   &__right {
     padding: 30px 0 0 24px;
 
-        @include tab {
+    @include tab {
       padding: 0;
     }
   }
@@ -555,22 +528,15 @@ footer
   &__ttl {
     color: #fff;
     font-size: 17px;
-
   }
 
-  &__bottom{
+  &__bottom {
     color: #19761e;
     font-size: 12px;
     background-color: #fff;
     text-align: center;
     padding: 4px;
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
 
   &__menu {
     display: block;
@@ -584,7 +550,6 @@ footer
     }
   }
 
-  
 
   &__top-btn {
     position: absolute;

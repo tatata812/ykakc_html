@@ -271,30 +271,6 @@ td {
 .form__group {
   margin-bottom: 24px;
 }
-.form__group label.form__label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 8px;
-  font-size: 15px;
-}
-.form__group label.form__label .required::after {
-  content: " 必須";
-  color: #fff;
-  background: #e60033;
-  font-size: 12px;
-  padding: 2px 6px 2px 0;
-  border-radius: 3px;
-  margin-left: 6px;
-  vertical-align: middle;
-}
-.form__group label.form__label .note {
-  display: inline-block;
-  font-weight: normal;
-  color: #ff6600;
-  font-size: 12px;
-  margin-left: 6px;
-  line-height: 1.4;
-}
 .form__group input[type=text],
 .form__group input[type=email],
 .form__group textarea {
@@ -317,6 +293,37 @@ td {
   resize: vertical;
   min-height: 120px;
 }
+.form__label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.form__label .required::before {
+  content: " 必須";
+  color: #fff;
+  background: #e60033;
+  font-size: 12px;
+  padding: 2px 6px 2px 6px;
+  border-radius: 3px;
+  margin: 0 6px 0 0;
+  vertical-align: middle;
+}
+.form__label .note {
+  display: inline-block;
+  font-weight: normal;
+  color: #ff6600;
+  font-size: 12px;
+  margin-left: 6px;
+  line-height: 1.4;
+}
+.form__label--file {
+  font-size: 17px;
+}
+.form__label--file-span {
+  display: block;
+  margin: 0 0 0 43px;
+}
 .form__row {
   display: flex;
   gap: 12px;
@@ -333,6 +340,72 @@ td {
 .form__date span {
   font-size: 14px;
   color: #333;
+}
+.form__box {
+  border: #ccc 1px solid;
+  padding: 12px;
+  margin: 0 0 16px;
+}
+.form__box-list span {
+  color: #e60033;
+}
+.form__file-wrap {
+  text-align: right;
+  margin: 0 0 40px;
+}
+.form__file-flex {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+.form__table-wrap {
+  margin: 0 0 40px;
+}
+.form__table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.form__table-wrap th,
+.form__table-wrap td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  vertical-align: top;
+  font-size: 13px;
+}
+@media (max-width: 600px) {
+  .form__table-wrap th,
+  .form__table-wrap td {
+    padding: 6px;
+  }
+}
+.form__table-wrap th {
+  background: #f0f0f0;
+  text-align: center;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.form__table-wrap td:nth-child(1) {
+  text-align: center;
+  font-weight: bold;
+  color: #0a802b;
+  vertical-align: middle;
+  font-size: 18px;
+}
+.form__table-wrap td {
+  vertical-align: middle;
+}
+.form__table-wrap tr:nth-child(even) td {
+  background: #fafafa;
+}
+.form__table-wrap tr:nth-child(1) th,
+.form__table-wrap tr:nth-child(1) td {
+  vertical-align: middle;
+}
+.form__table-wrap .highlight {
+  color: #ff6600;
+  font-weight: bold;
 }
 
 .form-actions-wrap {

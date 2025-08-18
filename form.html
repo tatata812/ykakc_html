@@ -180,26 +180,157 @@
           <input type="email" placeholder="yamadataro2022@yamaguchianzen.co.jp">
         </div>
 
-        <!-- 備考欄 -->
+        <!-- 本人確認書類 -->
         <div class="form__group">
-          <label class="form__label">備考欄</label>
-          <textarea rows="4" placeholder=""></textarea>
+          <label class="form__label"><span class="required">本人確認書類</span></label>
+          <div class="form__box">
+            <ul class="form__box-list">
+              <li>● 自動車運転免許証</li>
+              <li>● パスポート</li>
+              <li>● 住民票</li>
+              <li>等の公的書面の写し（受講者住所と合致しているもの）を<span>いずれか1つ</span></li>
+            </ul>
+          </div>
+          <p class="form__file-wrap">ファイル</p>
+        </div>
+
+        <!-- 本人確認書類（旧姓・通名併記の希望者のみ） -->
+        <div class="form__group">
+          <label class="form__label">本人確認書類（旧姓・通名併記の希望者のみ）</label>
+          <div class="form__box">
+            <ul class="form__box-list">
+              <li>● 旧姓・通名を併記した住民票</li>
+              <li>● 自動車運転免許証</li>
+              <li>● 戸籍謄本</li>
+              <li>等の公的書面（受講者住所と合致しているもの）をいずれか1つ<span>いずれか1つ</span></li>
+            </ul>
+          </div>
+          <p class="form__file-wrap">ファイル</p>
+        </div>
+
+        <!-- 本人写真のアップロード -->
+        <div class="form__group">
+          <label class="form__label"><span class="required">本人写真のアップロード</span></label>
+          <div class="form__box">
+            <ul class="form__box-list">
+              <li>※ 受講申し込み書類に使用します</li>
+              <li>※ 2MBまで</li>
+              <li>※ 上半身を撮った縦方向のもの</li>
+            </ul>
+          </div>
+          <p class="form__file-wrap">ファイル</p>
+        </div>
+
+        <!-- 必要書類をアップロード -->
+        <div class="form__group">
+          <label class="form__label form__label--file"><span class="required">下表の受講資格要件番号のうち該当する番号を１つ選んで<span
+                class="form__label--file-span">必要書類をアップロードしてください</span></span></label>
+          <div class="form__file-flex">
+            <div class="form__file-flex-item">
+              <span>受講資格要件番号</span>
+              <select name="job">
+                <option value="">1〜12のうち1つ</option>
+                <option value="">1</option>
+                <option value="">2</option>
+              </select>
+            </div>
+            <div class="form__file-flex-item">
+              <p class="form__file-wrap">ファイル</p>
+
+            </div>
+          </div>
+          <div class="form__table-wrap">
+            <table class="qual-table">
+              <thead>
+                <tr>
+                  <th>受講資格<br>要件番号</th>
+                  <th>受講資格要件</th>
+                  <th>必要書類</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>石綿作業主任者技能講習修了者</td>
+                  <td>石綿作業主任者技能講習修了証<br>両面写し</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>学校教育法による大学( 短期大学を除く。) において、工学に関する正規の課程又はこれに相当 する課程を修めて卒業した後、工作物に関して2年以上の実務の経験を有する者（「工作物に
+                    関して」の実務経験とは、具体的には、工作物の研究、設計、制作又は据付け等の業務の経験 をいう。以下同じ。）</td>
+                  <td rowspan="4">卒業証書写し<br>又は<br>卒業証明書<br>及び<br><span class="highlight">実務経験証明書</span></td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>学校教育法による短期大学( 修業年限が3 年であるものに限り、同法による専門職大学の3 年 の前期課程を含む。) において、工学に関する正規の課程又はこれに相当する課程( 夜間におい
+                    て授業を行うものを除く。) を修めて卒業した後( 同法による専門職 大学の前期課程にあっては、修了した後。4 において同じ。)、工作物に関して3 年以上の実務の経験を有する者</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>学校教育法による短期大学(
+                    同法による専門職大学の前期課程を含む。)又は高等専門学校において、工学に関する正規の課程又はこれに相当する課程を修めて卒業した後、工作物に関して4年以上の実務の経験を有する者(3 に該当する者を除く。
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>学校教育法による高等学校又は中等教育学校において、工学に関する正規の課程又はこれに相当する課程を修めて卒業した後、工作物に関して7年以上の実務経験を有する者</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>工作物に関して11年以上の実務の経験を有する者</td>
+                  <td><span class="highlight">実務経験証明書</span></td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>安衛法等の一部を改正する法律(平成17年法律第108号)
+                    による改正前の安衛法別表第18第22号に掲げる特定化学物質等作業主任者技能講習を修了した者で、工作物石綿事前調査に関して5年以上の実務を有する者</td>
+                  <td>特定化学物質等作業主任者技能講習修了証（両面写し）<br>及び<br><span class="highlight">実務経験証明書</span></td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>建築行政に関して2年以上の実務の経験を有する者</td>
+                  <td><span class="highlight">実務経験証明書</span></td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>環境行政(石綿の飛散の防止に関するものに限る。) に関して2年以上実務経験証明書の実務経験を有する者</td>
+                  <td><span class="highlight">実務経験証明書</span></td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>安衛法第93条第1項の産業安全専門官若しくは労働衛生専門官又は同項の産業安全専門官若しくは労働衛生専門官であった者</td>
+                  <td><span class="highlight">実務経験証明書</span></td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>労働基準監督官として2年以上の職務に従事した経験を有する者</td>
+                  <td><span class="highlight">実務経験証明書</span></td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>第一種作業環境測定士又は第二種作業環境測定士であって、工作物石綿事前材調査に関して 5 年以上の実務経験を有する者</td>
+                  <td>第一種作業環境測定士<br>
+                    又は<br>
+                    第二種作業環境測定士<br>
+                    登録証写し<br>
+                    及び<br><span class="highlight">実務経験証明書</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- 備考欄 -->
+          <div class="form__group">
+            <label class="form__label">備考欄</label>
+            <textarea rows="4" placeholder=""></textarea>
+          </div>
+
+          <div class="page-form__privacy-wrap">
+            <p><a href="">「個人情保護方針」</a>をお読みいただきチェックを入れて下さい</p>
+            <input type="checkbox" name="privacy_agreement" required>
+            <span class="check-text">同意する</span>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="form__file-wrap" style="text-align: center;margin: 0 auto 40px;
-    width: 200px;
-    background: aliceblue;
-    padding: 22px;">
-      ファイル
-    </div>
-
-    <div class="page-form__privacy-wrap">
-      <p><a href="">「個人情保護方針」</a>をお読みいただきチェックを入れて下さい</p>
-      <input type="checkbox" name="privacy_agreement" required>
-      <span class="check-text">同意する</span>
-
     </div>
 
     <div class="form-actions-wrap">
